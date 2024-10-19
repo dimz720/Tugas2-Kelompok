@@ -1,0 +1,74 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.ussd-container {
+    background-color: #ffffff;
+    width: 300px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: left;
+}
+
+.ussd-menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0;
+    text-align: left;
+}
+
+.ussd-menu li {
+    margin: 8px 0;
+}
+
+button, input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    background-color: #12c212; /* Warna default untuk tombol hijau */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover, input[type="submit"]:hover {
+    background-color: #373a38;
+}
+
+button {
+    background-color: red; /* Warna tombol "Kembali" menjadi merah */
+}
+
+input[type="text"], input[type="number"] {
+    width: 90%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+#message {
+    margin-top: 20px;
+    font-weight: bold;
+    color: rgb(72, 62, 63);
+}
+
+.ussd-container p {
+    margin: 10px 0;
+}
+
+.ussd-container strong {
+    color: #020202;
+    font-weight: bold;
+}

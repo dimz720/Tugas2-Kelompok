@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulasi USSD *858#</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+    <!-- Halaman input USSD -->
+    <div id="input-ussd" class="ussd-container">
+        <p>Masukkan Nomor USSD:</p>
+        <form id="ussdForm">
+            <input type="text" id="ussdInput" placeholder="Contoh: *858#" required>
+            <input type="submit" value="Send">
+        </form>
+    </div>
+
+    <!-- Menu Utama -->
+<div id="menu-utama" class="ussd-container" style="display: none;">
+        <p>Mau iPhone 15Plus dr Saskia Chadwick? Hub *500*117#</p>
+        <ul class="ussd-menu">
+            <li>1. Transfer Pulsa</li>
+            <li>2. Minta Pulsa</li>
+            <li>3. Auto TP</li>
+            <li>4. Delete Auto TP</li>
+            <li>5. List Auto TP</li>
+            <li>6. Cek Kupon Undian TP</li>
+        </ul>
+       
+        <form id="menuForm">
+            <input type="number" id="menuNumber" placeholder="Contoh: 1" required>
+            <input type="submit" value="Pilih">
+        </form>
+    </div>
+
+    <!-- Halaman Transfer Pulsa -->
+    <div id="transfer-pulsa" class="ussd-container" style="display: none;">
+        <p>Silahkan masukkan nomor tujuan Transfer Pulsa:</p>
+        <form id="transferForm">
+            <input type="text" id="transferNumber" placeholder="Contoh: 08xxxx" required>
+            <p>Masukkan jumlah pulsa:</p>
+            <input type="number" id="transferAmount" placeholder="Contoh: 50000" required>
+            <input type="submit" value="Send">
+        </form>
+        <button onclick="goBack()">Kembali</button>
+    </div>
+
+    <!-- Halaman Minta Pulsa -->
+    <div id="minta-pulsa" class="ussd-container" style="display: none;">
+        <p>Silahkan masukkan nomor tujuan Minta Pulsa:</p>
+        <form id="mintaForm">
+            <input type="text" id="mintaNumber" placeholder="Contoh: 08xxxx" required>
+            <p>Masukkan jumlah pulsa yang diminta:</p>
+            <input type="number" id="mintaAmount" placeholder="Contoh: 50000" required>
+            <input type="submit" value="Send">
+        </form>
+        <button onclick="goBack()">Kembali</button>
+    </div>
+
+    <!-- Halaman Auto TP -->
+    <div id="auto-tp" class="ussd-container" style="display: none;">
+        <p>Masukkan nomor tujuan untuk Auto TP:</p>
+        <form id="autoTpForm">
+            <input type="text" id="autoTpNumber" placeholder="Contoh: 08xxxx" required>
+            <p>Masukkan jumlah Auto TP:</p>
+            <input type="number" id="autoTpAmount" placeholder="Contoh: 50000" required>
+            <input type="submit" value="Send">
+        </form>
+        <button onclick="goBack()">Kembali</button>
+    </div>
+
+    <!-- Halaman Delete Auto TP -->
+    <div id="delete-auto-tp" class="ussd-container" style="display: none;">
+        <p>Masukkan nomor untuk menghapus Auto TP:</p>
+        <form id="deleteAutoTpForm">
+            <input type="text" id="deleteAutoTpNumber" placeholder="Contoh: 08xxxx" required>
+            <input type="submit" value="Send">
+        </form>
+        <button onclick="goBack()">Kembali</button>
+    </div>
+
+    <!-- Halaman List Auto TP -->
+    <div id="list-auto-tp" class="ussd-container" style="display: none;">
+        <p>Daftar Auto TP aktif:</p>
+        <div id="autoTpList"></div>
+        <button onclick="goBack()">Kembali</button>
+    </div>
+
+    <!-- Halaman Cek Kupon TP -->
+    <div id="cek-kupon-tp" class="ussd-container" style="display: none;">
+        <p>Kupon undian Anda berhasil dicek.</p>
+        <button onclick="goBack()">Kembali</button>
+    </div>
+
+    <!-- Pesan hasil -->
+    <div id="message" class="ussd-container" style="display: none;">
+        <p id="messageText"></p>
+        <button onclick="goBack()">Kembali</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
